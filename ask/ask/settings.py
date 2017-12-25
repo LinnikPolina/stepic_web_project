@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'autofixture',
+    'qa',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,6 +64,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ask',
+#         'USER': 'ask_user',
+#         'PASSWORD': '123456789',
+#         'HOST': '',
+#         'PORT': '3306',
+#     }
+# }
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -80,3 +93,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Load local settings
+try:
+    from ask.settings_local import *
+except ImportError:
+    pass
