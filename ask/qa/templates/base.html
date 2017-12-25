@@ -12,18 +12,14 @@
   </header>
   <div class="wrapper">
     <div class="content">
-      {% block content %}{% endblock %}
+      {% block content %}
+      {% endblock %}
     </div>
     <div class="sidebar">
-      {% block sidebar %}
-        <h2>Navigation</h2>
-        <p><a href="/">Home</a></p>
-        <p><a href="/popular/">Popular Questions</a></p>
-        <p><a href="/ask/">Ask Question</a></p>
-        <p><a href="/login/">Log In</a></p>
-        <p><a href="/signup/">Sign Up</a></p>
-        <p><a href="/logout/">Log Out</a></p>
-      {% endblock %}
+      <h2>Navigation</h2>
+      <p><a href="/">Home</a></p>
+      <p><a href="/popular/">Popular Questions</a></p>
+      <p><a href="/ask/">Ask Question</a></p>
     </div>
   </div>
   <div class="clear"></div>
