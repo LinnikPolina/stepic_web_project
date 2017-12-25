@@ -1,8 +1,21 @@
-from django.conf.urls import patterns, include, url
+#project/project/urls.py
+urlpatterns = patterns('qa.views',
 
-from django.contrib import admin
-admin.autodiscover()
+   url(r'^$', 'test', name='index'),
 
-urlpatterns = patterns('',
-    url(r'^', include('qa.urls')),
+   url(r'^login/', 'test', name='login'),
+
+   url(r'^signup/', 'test', name='signup'),
+
+   url(r'^question/(?P<id>[0-9]+)/$', 'test', name='question'),
+
+   url(r'^ask/', 'test', name='ask'),
+
+   url(r'^popular/', 'test', name='popular'),   
+
+   url(r'^new/', 'test', name='new'),  
+
 )
+
+#//urlpatterns=[
+#//]
