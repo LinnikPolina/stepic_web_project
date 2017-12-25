@@ -15,7 +15,7 @@ class Question(models.Model):
     class Meta:
         ordering = ('-added_at',)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     def get_absolute_url(self):
@@ -31,8 +31,5 @@ class Answer(models.Model):
     class Meta:
         ordering = ('added_at',)
 
-    def __unicode__(self):
+    def __str__(self):
         return 'Answer by {}'.format(self.author)
-
-
-# TODO: when upgrading don't forget to rename __unicode__ to __str__
